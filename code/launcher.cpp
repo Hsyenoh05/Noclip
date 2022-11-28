@@ -205,8 +205,6 @@ int world::launcher()
     launcher_gui_skin->setColor(irr::gui::EGDC_BUTTON_TEXT, irr::video::SColor(255, 0, 0, 0));
 
     /* gui */
-    irr::gui::IGUIStaticText* launcher_text_game = launcher_gui->addStaticText(L"Noclip Launcher", irr::core::recti(2, 2, launcher_window_x, launcher_window_y));
-
     irr::video::ITexture* button = launcher_driver->getTexture("assets/user_interface/launcher/button.png");
     irr::video::ITexture* button_pressed = launcher_driver->getTexture("assets/user_interface/launcher/button_pressed.png");
     irr::video::ITexture* button_big = launcher_driver->getTexture("assets/user_interface/launcher/button_big.png");
@@ -272,9 +270,13 @@ int world::launcher()
     current_res->setImage(button_big);
     irr::gui::IGUIStaticText* current_res_text = launcher_gui->addStaticText(L"Current:640x480", irr::core::recti(20, 160, 232, 184));
 
-    irr::gui::IGUIImage* developer_button = launcher_gui->addImage(irr::core::rect<irr::s32>(264, 434, 486, 470));
-    developer_button->setImage(button_big);
+    irr::gui::IGUIImage* developer = launcher_gui->addImage(irr::core::rect<irr::s32>(264, 434, 486, 470));
+    developer->setImage(button_big);
     irr::gui::IGUIStaticText* developer_name = launcher_gui->addStaticText(L"Game by:Hsyenoh05", irr::core::recti(274, 447, 480, 460));
+
+    irr::gui::IGUIImage* launcher_game = launcher_gui->addImage(irr::core::rect<irr::s32>(10, 10, 232, 46));
+    launcher_game->setImage(button_big);
+    irr::gui::IGUIStaticText* launcher_game_text = launcher_gui->addStaticText(L"Noclip Launcher", irr::core::recti(32, 23, 232, 46));
 
     launcher_context context;
     context.launcher_device = launcher_device;
