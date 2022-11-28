@@ -1461,17 +1461,16 @@
 1669492916 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\player.cpp
 	"player.h"
 
-1669593713 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\world.cpp
+1669598399 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\world.cpp
 	"world.h"
 	"player.h"
 	"object.h"
 	"places/place_headers.h"
 
-1669553258 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\places\place_headers.h
-	"place_apartment.h"
+1669598140 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\places\place_headers.h
 	"place_testing_chamber.h"
 
-1669591258 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\main.cpp
+1669596025 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\main.cpp
 	<irrlicht.h>
 	"code/world.h"
 

@@ -111,31 +111,34 @@ world::world(bool launcher_enabled)
 /// while loop ///
 bool world::run()
 {
-    while (device->run())
+    if (ready)
     {
-        if (device->isWindowActive())
+        while (device->run())
         {
-            video_driver->beginScene(true, true, irr::video::SColor(255, 0, 0, 0));
-
-            scene_manager->drawAll();
-            gui_environment->drawAll();
-
-            video_driver->endScene();
-
-            render_text(true, false);
-
-            raycast();
-
-            // close game
-            if (receiver.is_key_down(irr::KEY_F12))
+            if (device->isWindowActive())
             {
-                device->closeDevice();
-                return 0;
+                video_driver->beginScene(true, true, irr::video::SColor(255, 0, 0, 0));
+
+                scene_manager->drawAll();
+                gui_environment->drawAll();
+
+                video_driver->endScene();
+
+                render_text(true, false);
+
+                raycast();
+
+                // close game
+                if (receiver.is_key_down(irr::KEY_F12))
+                {
+                    device->closeDevice();
+                    return 0;
+                }
             }
-        }
-        else
-        {
-            device->yield();
+            else
+            {
+                device->yield();
+            }
         }
     }
 }
