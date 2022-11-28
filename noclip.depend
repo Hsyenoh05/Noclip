@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1669595666 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\launcher.cpp
+1669644685 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\launcher.cpp
 	"world.h"
 
-1669592960 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\world.h
+1669640093 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\world.h
 	"game_object.h"
 
 1669593896 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\game_object.h
@@ -1461,16 +1461,16 @@
 1669492916 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\player.cpp
 	"player.h"
 
-1669598399 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\world.cpp
+1669640175 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\world.cpp
 	"world.h"
 	"player.h"
 	"object.h"
-	"places/place_headers.h"
+	"levels/level_0.h"
 
 1669598140 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\places\place_headers.h
 	"place_testing_chamber.h"
 
-1669596025 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\main.cpp
+1669638310 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\main.cpp
 	<irrlicht.h>
 	"code/world.h"
 
@@ -1735,4 +1735,19 @@
 	<ndCharacterInverseDynamicNode.h>
 	<ndMultiBodyVehicleDifferential.h>
 	<ndMultiBodyVehicleDifferentialAxle.h>
+
+1669637382 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\levels\level.cpp
+	"level.h"
+	"../object.h"
+	"../player.h"
+
+1669637397 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\levels\level.h
+	"../game_object.h"
+	"../world.h"
+
+1669637419 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\levels\level_0.cpp
+	"level_0.h"
+
+1669637409 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\levels\level_0.h
+	"level.h"
 

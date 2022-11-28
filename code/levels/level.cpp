@@ -1,8 +1,8 @@
-#include "place.h"
+#include "level.h"
 #include "../object.h"
 #include "../player.h"
 
-void place::load_place(const irr::io::path& place_mesh_file, const irr::io::path& place_col_file)
+void level::load_place(const irr::io::path& place_mesh_file, const irr::io::path& place_col_file)
 {
     irr::scene::IMesh* place_mesh = game_object::irr_scene->getMesh(place_mesh_file);
     irr::scene::IMesh* place_col = game_object::irr_scene->getMesh(place_col_file);

@@ -4,7 +4,6 @@
 /*   and is licensed under the CC BY-SA 3.0 license   */
 /*                                                    */
 
-#include <irrlicht.h>
 #include "code/world.h"
 
 int main()

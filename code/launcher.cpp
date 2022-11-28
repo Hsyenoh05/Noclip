@@ -1,8 +1,5 @@
 #include "world.h"
 
-irr::IrrlichtDevice* launcher_device;
-irr::gui::IGUIEnvironment* launcher_gui;
-
 unsigned short window_w = 640, window_h = 480;
 bool use_fullscreen = false;
 bool is_ready;
@@ -195,15 +192,13 @@ int world::launcher()
 
     unsigned short launcher_window_x = 640, launcher_window_y = 480;
 
-
-
     irr::IrrlichtDevice* launcher_device = irr::createDevice(irr::video::EDT_OPENGL, irr::core::dimension2d<irr::u32>(launcher_window_x, launcher_window_y), 32, false);
 
     launcher_device->setWindowCaption(L"Noclip Launcher");
 
     irr::scene::ISceneManager* launcher_scene = launcher_device->getSceneManager();
     irr::video::IVideoDriver* launcher_driver = launcher_device->getVideoDriver();
-    launcher_gui = launcher_device->getGUIEnvironment();
+    irr::gui::IGUIEnvironment* launcher_gui = launcher_device->getGUIEnvironment();
     irr::gui::IGUISkin* launcher_gui_skin = launcher_gui->getSkin();
     irr::gui::IGUIFont* launcher_ludio_font = launcher_gui->getFont("assets/fonts/ludio.xml");
     launcher_gui_skin->setFont(launcher_ludio_font);
@@ -309,7 +304,9 @@ int world::launcher()
     is_fullscreen = use_fullscreen;
     ready = is_ready;
 
-    launcher_device->drop();
+    launcher_device->setEventReceiver(0);
+    launcher_device->closeDevice();
+    launcher_device->run();
     launcher_device->drop();
 
     return 1;

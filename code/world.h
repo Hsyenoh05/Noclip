@@ -118,8 +118,8 @@ public:
     irr::scene::ISceneNode* interactable_object;           /* interactable object */
     irr::scene::ISceneCollisionManager* collision_manager; /* collision manager */
 
-    world(bool launcher_enabled);
-    ~world(); /* <- game destructor */ /*/ /* ^ game constructor ^ */
+    world(bool launcher_enabled); /* game constructor */
+    ~world(); /* game destructor */
 
     bool run(); /* while loop */
 };

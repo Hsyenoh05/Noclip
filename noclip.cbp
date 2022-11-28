@@ -55,15 +55,12 @@
 		</Compiler>
 		<Unit filename="code/game_object.h" />
 		<Unit filename="code/launcher.cpp" />
+		<Unit filename="code/levels/level.cpp" />
+		<Unit filename="code/levels/level.h" />
+		<Unit filename="code/levels/level_0.cpp" />
+		<Unit filename="code/levels/level_0.h" />
 		<Unit filename="code/object.cpp" />
 		<Unit filename="code/object.h" />
-		<Unit filename="code/places/place.cpp" />
-		<Unit filename="code/places/place.h" />
-		<Unit filename="code/places/place_apartment.cpp" />
-		<Unit filename="code/places/place_apartment.h" />
-		<Unit filename="code/places/place_headers.h" />
-		<Unit filename="code/places/place_testing_chamber.cpp" />
-		<Unit filename="code/places/place_testing_chamber.h" />
 		<Unit filename="code/player.cpp" />
 		<Unit filename="code/player.h" />
 		<Unit filename="code/world.cpp" />
