@@ -16,7 +16,6 @@ public:
     static irr::scene::ISceneManager* irr_scene;
     static irr::video::IVideoDriver* irr_video;
     static irr::gui::IGUIEnvironment* irr_gui;
-    static int res_x, res_y;
 };
 
 #endif // GAME_OBJECT_H

@@ -88,7 +88,7 @@ public:
     // launcher variables
     bool use_launcher;  /* toggle launcher */
     bool ready; /* if true, the game will start after using the launcher */
-    int launcher();     /* open launcher */
+    int launcher(); /* open launcher */
 
     // variables
     unsigned short window_x, window_y; /* screen resolution's width and height */

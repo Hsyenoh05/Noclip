@@ -12,42 +12,38 @@ irr::video::IVideoDriver* game_object::irr_video = nullptr;
 irr::gui::IGUIEnvironment* game_object::irr_gui = nullptr;
 irr::scene::ITriangleSelector* game_object::irr_collision = nullptr;
 irr::scene::ICameraSceneNode* game_object::irr_camera = nullptr;
-int game_object::res_x = 0;
-int game_object::res_y = 0;
 
 void world::initializer()
 {
-    if (ready)
-    {
-        device = irr::createDevice(irr::video::EDT_OPENGL, irr::core::dimension2d<irr::u32>(window_x, window_y), 32, is_fullscreen, false, true, &receiver);
-        game_object::irr_device = device;
-        scene_manager = device->getSceneManager();
-        video_driver = device->getVideoDriver();
-        game_object::irr_scene = scene_manager;
-        game_object::irr_video = video_driver;
+    device = irr::createDevice(irr::video::EDT_OPENGL, irr::core::dimension2d<irr::u32> /* initialize */
+    (window_x, window_y), 32, is_fullscreen, false, true, &receiver);                   /*   device   */
+    scene_manager = device->getSceneManager(); /* initialize scene manager */
+    video_driver = device->getVideoDriver(); /* initialize video driver */
 
-        printf(":(");
+    collision_manager = scene_manager->getSceneCollisionManager(); /* initialize collision manager */
 
-        collision_manager = scene_manager->getSceneCollisionManager();
+    gui_environment = device->getGUIEnvironment(); /* initialize gui enviroment */
 
-        gui_environment = device->getGUIEnvironment();
-        game_object::irr_gui = gui_environment;
-        gui_skin = gui_environment->getSkin();
+    game_object::irr_device = device;       /*                      */
+    game_object::irr_scene = scene_manager; /*    instances for     */
+    game_object::irr_video = video_driver;  /* non-member functions */
+    game_object::irr_gui = gui_environment; /*                      */
 
-        ludio_font = gui_environment->getFont("assets/fonts/ludio.xml");
+    gui_skin = gui_environment->getSkin();  /* initialize gui skin */
 
-        fps_count = gui_environment->addStaticText(L"FPS:???", irr::core::recti(window_x - 95, 0, window_x, window_y));
+    ludio_font = gui_environment->getFont("assets/fonts/ludio.xml"); /* load main font */
 
-        device->setWindowCaption(L"Noclip"); /* window name */
-        gui_environment->addStaticText(L"0.0.1", irr::core::recti(0, 0, window_x, window_y)); /* version number */
+    fps_count = gui_environment->addStaticText(L"FPS:???", irr::core::recti(window_x - 95, 0, window_x, window_y)); /* fps counter */
 
-        gui_skin->setFont(ludio_font);                                                          /*   set up   */
-        gui_skin->setColor(irr::gui::EGDC_BUTTON_TEXT, irr::video::SColor(255, 255, 255, 255)); /*  main font */
+    device->setWindowCaption(L"Noclip"); /* window name */
+    gui_environment->addStaticText(L"0.0.1", irr::core::recti(0, 0, window_x, window_y)); /* version number */
 
-        previous_time = device->getTimer()->getTime(); /* previous cpu tick */
+    gui_skin->setFont(ludio_font);                                                          /*   set up   */
+    gui_skin->setColor(irr::gui::EGDC_BUTTON_TEXT, irr::video::SColor(255, 255, 255, 255)); /*  main font */
 
-        init_player(); /* initialize  player */
-    }
+    previous_time = device->getTimer()->getTime(); /* previous cpu tick */
+
+    init_player(); /* initialize  player */
 }
 
 void world::init_player()

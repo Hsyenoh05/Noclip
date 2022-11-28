@@ -272,6 +272,9 @@ int world::launcher()
     current_res->setImage(button_big);
     irr::gui::IGUIStaticText* current_res_text = launcher_gui->addStaticText(L"Current:640x480", irr::core::recti(20, 160, 232, 184));
 
+    irr::gui::IGUIImage* developer_button = launcher_gui->addImage(irr::core::rect<irr::s32>(264, 434, 486, 470));
+    developer_button->setImage(button_big);
+    irr::gui::IGUIStaticText* developer_name = launcher_gui->addStaticText(L"Game by:Hsyenoh05", irr::core::recti(274, 447, 480, 460));
 
     launcher_context context;
     context.launcher_device = launcher_device;

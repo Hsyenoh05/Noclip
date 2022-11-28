@@ -2,10 +2,10 @@
 1669644685 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\launcher.cpp
 	"world.h"
 
-1669640093 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\world.h
+1669646077 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\world.h
 	"game_object.h"
 
-1669593896 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\game_object.h
+1669645100 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\game_object.h
 	<irrlicht.h>
 	<SFML/Graphics.hpp>
 
@@ -1461,7 +1461,7 @@
 1669492916 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\player.cpp
 	"player.h"
 
-1669640175 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\world.cpp
+1669645978 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\world.cpp
 	"world.h"
 	"player.h"
 	"object.h"
@@ -1470,8 +1470,7 @@
 1669598140 c:\users\hsyenoh\documents\game_development\irrlicht\noclip\code\places\place_headers.h
 	"place_testing_chamber.h"
 
-1669638310 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\main.cpp
-	<irrlicht.h>
+1669644797 source:c:\users\hsyenoh\documents\game_development\irrlicht\noclip\main.cpp
 	"code/world.h"
 
 1181644084 c:\c_plus_plus_libraries\irrnewt\include\irrnewt.hpp
