@@ -31,6 +31,8 @@ void world::initializer()
 
     gui_skin = gui_environment->getSkin();  /* initialize gui skin */
 
+    irr_scene->getParameters()->setAttribute(irr::scene::B3D_TEXTURE_PATH, "assets/textures");
+
     ludio_font = gui_environment->getFont("assets/fonts/ludio.xml"); /* load main font */
 
     fps_count = gui_environment->addStaticText(L"FPS:???", irr::core::recti(window_x - 95, 0, window_x, window_y)); /* fps counter */
