@@ -22,7 +22,7 @@ void world::initializer()
 
     collision_manager = scene_manager->getSceneCollisionManager(); /* initialize collision manager */
 
-    gui_environment = device->getGUIEnvironment(); /* initialize gui enviroment */
+    gui_environment = device->getGUIEnvironment(); /* initialize gui environment */
 
     game_object::irr_device = device;       /*                      */
     game_object::irr_scene = scene_manager; /*    instances for     */
