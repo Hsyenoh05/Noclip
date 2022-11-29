@@ -9,11 +9,11 @@ To compile this game you need:
 
 1- Code::Blocks 20.03 (32-bit)
 
-2- Irrlicht 1.8.1 libraries
+2- Irrlicht 1.8.5
 
-3- SFML 2.5.1
+3- SFML 2.5.1 (You need to build it using your current compiler if you want SFML functions to work)
 
-4- GCC 7.3.0 MinGW compiler (DW2, 32-bit) -> [Download link](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win32/Personal%20Builds/mingw-builds/7.3.0/threads-posix/dwarf/i686-7.3.0-release-posix-dwarf-rt_v5-rev0.7z/download)
+4- link all necessary libraries and add all include/lib folders to the search directories in Code::Blocks.
 
 # Notice
 
