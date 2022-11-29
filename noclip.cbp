@@ -40,9 +40,9 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="sfml-graphics-d" />
-					<Add library="sfml-window-d" />
-					<Add library="sfml-system-d" />
+					<Add library="sfml-graphics" />
+					<Add library="sfml-window" />
+					<Add library="sfml-system" />
 					<Add library="C:/c_plus_plus_libraries/irrlicht/lib/Win32-gcc/libIrrlicht.a" />
 					<Add directory="C:/c_plus_plus_libraries/irrlicht/lib/Win32-gcc" />
 					<Add directory="C:/c_plus_plus_libraries/sfml/lib" />

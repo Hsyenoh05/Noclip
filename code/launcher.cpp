@@ -209,6 +209,10 @@ int world::launcher()
     irr::video::ITexture* button_pressed = launcher_driver->getTexture("assets/user_interface/launcher/button_pressed.png");
     irr::video::ITexture* button_big = launcher_driver->getTexture("assets/user_interface/launcher/button_big.png");
     irr::video::ITexture* button_big_pressed = launcher_driver->getTexture("assets/user_interface/launcher/button_big_pressed.png");
+    irr::video::ITexture* base_texture = launcher_driver->getTexture("assets/user_interface/launcher/base.png");
+
+    irr::gui::IGUIImage* base = launcher_gui->addImage(irr::core::rect<irr::s32>(0, 0, launcher_window_x, launcher_window_y));
+    base->setImage(base_texture);
 
     irr::gui::IGUIButton* button_play = launcher_gui->addButton(irr::core::rect<irr::s32>(520, 434, 630, 470), 0, launcher_button_play, L"Play");
     button_play->setImage(button, irr::core::rect<irr::s32>(0, 0, 110, 36));

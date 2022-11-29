@@ -102,12 +102,14 @@ world::world(bool launcher_enabled)
     if (use_launcher)
     {
         launcher();
+
+        if (!ready)
+        {
+            exit(1);
+        }
     }
 
-    if (!ready)
-    {
-        exit(1);
-    }
+    ready = true;
 
     initializer(); /* initializer */
 

@@ -91,8 +91,8 @@ public:
     int launcher(); /* open launcher */
 
     // variables
-    unsigned short window_x, window_y; /* screen resolution's width and height */
-    bool is_fullscreen;                /* toggle fullscreen */
+    unsigned short window_x = 640, window_y = 480; /* screen resolution's width and height */
+    bool is_fullscreen = false;                /* toggle fullscreen */
     int previous_fps = -1;             /* previous cpu tick */
     int raycast_distance = 4;          /* distance of the player's raycast */
 
