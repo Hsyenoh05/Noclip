@@ -10,7 +10,7 @@
 
 int main()
 {
-    world* gameworld = new world(true);
+    world* gameworld = new world(false);
 
     while (gameworld->run()) {};
 

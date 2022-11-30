@@ -6,7 +6,7 @@
 class level_0 : public level
 {
 public:
-    static void load_place();
+    static void generate();
 };
 
 #endif // LEVEL_0_H

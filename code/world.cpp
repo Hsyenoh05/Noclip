@@ -36,6 +36,7 @@ void world::initializer()
     ludio_font = gui_environment->getFont("assets/fonts/ludio.xml"); /* load main font */
 
     fps_count = gui_environment->addStaticText(L"FPS:???", irr::core::recti(window_x - 95, 0, window_x, window_y)); /* fps counter */
+    debug_text = gui_environment->addStaticText(L"DEBUG", irr::core::recti(0, window_y / 2, window_x, window_y)); /* fps counter */
 
     device->setWindowCaption(L"Noclip"); /* window name */
     gui_environment->addStaticText(L"0.0.1", irr::core::recti(0, 0, window_x, window_y)); /* version number */
@@ -94,6 +95,27 @@ void world::render_text(bool render_fps, bool render_debug)
             previous_fps = current_fps;              /* update framerate count */
         }
     }
+    if (render_debug == true)
+    {
+        irr::core::stringw debug_string = L"Camera Target X:";
+        debug_string += game_object::irr_camera->getTarget().X;
+        debug_string += L"\n\nCamera Target Y:";
+        debug_string += game_object::irr_camera->getTarget().Y;
+        debug_string += L"\n\nCamera Position X:";
+        debug_string += game_object::irr_camera->getPosition().X;
+        debug_string += L"\n\nCamera Position Y:";
+        debug_string += game_object::irr_camera->getPosition().Y;
+        debug_string += L"\n\nCamera Position Z:";
+        debug_string += game_object::irr_camera->getPosition().Z;
+        debug_string += L"\n\nCamera Rotation X:";
+        debug_string += game_object::irr_camera->getRotation().X;
+        debug_string += L"\n\nCamera Rotation Y:";
+        debug_string += game_object::irr_camera->getRotation().Y;
+        debug_string += L"\n\nCamera Rotation Z:";
+        debug_string += game_object::irr_camera->getRotation().Z;
+
+        debug_text->setText(debug_string.c_str());
+    }
 
 }
 
@@ -115,8 +137,11 @@ world::world(bool launcher_enabled)
 
     initializer(); /* initializer */
 
-    level_0::load_place(); /* load place */
-}
+    level::load(levels::tutorial_level);
+
+    object::light(255, 255, 255, irr::core::vector3df(0, 2, 0), 5.0f, true);
+
+    }
 
 /// while loop ///
 bool world::run()
@@ -132,11 +157,10 @@ bool world::run()
 
             video_driver->endScene();
 
-            render_text(true, false);
+            render_text(true, true);
 
             raycast();
 
-            // close game
             if (receiver.is_key_down(irr::KEY_F12))
             {
                 device->closeDevice();

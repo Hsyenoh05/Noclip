@@ -29,3 +29,13 @@ player::~player()
 {
     game_object::irr_camera->remove();
 }
+
+void player::update()
+{
+
+}
+
+void player::teleport(irr::core::vector3df& new_pos)
+{
+    player_camera->setPosition(new_pos);
+}

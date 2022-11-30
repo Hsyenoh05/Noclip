@@ -19,9 +19,9 @@
 					<Add directory="C:/c_plus_plus_libraries/sfml/include" />
 				</Compiler>
 				<Linker>
-					<Add library="sfml-graphics-d" />
-					<Add library="sfml-window-d" />
-					<Add library="sfml-system-d" />
+					<Add library="C:/c_plus_plus_libraries/sfml/lib/libsfml-graphics.a" />
+					<Add library="C:/c_plus_plus_libraries/sfml/lib/libsfml-window.a" />
+					<Add library="C:/c_plus_plus_libraries/sfml/lib/libsfml-system.a" />
 					<Add library="C:/c_plus_plus_libraries/irrlicht/lib/Win32-gcc/libIrrlicht.a" />
 					<Add directory="C:/c_plus_plus_libraries/irrlicht/lib/Win32-gcc" />
 					<Add directory="C:/c_plus_plus_libraries/sfml/lib" />
@@ -40,9 +40,9 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="sfml-graphics" />
-					<Add library="sfml-window" />
-					<Add library="sfml-system" />
+					<Add library="C:/c_plus_plus_libraries/sfml/lib/libsfml-graphics.a" />
+					<Add library="C:/c_plus_plus_libraries/sfml/lib/libsfml-window.a" />
+					<Add library="C:/c_plus_plus_libraries/sfml/lib/libsfml-system.a" />
 					<Add library="C:/c_plus_plus_libraries/irrlicht/lib/Win32-gcc/libIrrlicht.a" />
 					<Add directory="C:/c_plus_plus_libraries/irrlicht/lib/Win32-gcc" />
 					<Add directory="C:/c_plus_plus_libraries/sfml/lib" />
